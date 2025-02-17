@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <form onsubmit="return false">
+          <label for="">Maskan sisi miring</label>
+          <input type="number" id="sisi">
+          <label for="">Masukan alas</label>
+          <input type="number" id="alas">
+          <label for="">Masukan tinggi</label>
+          <input type="number" id="tinggi">
+          <button onclick="hitung_luaskeliling()">Hitung luas Dan Keliling</button>
+     </form>
+     <div id="hasil"></div>
+     <div id="hasil1"></div>
+     <script>
+          function hitung_luaskeliling() {
+               let sisi = parseInt (document.getElementById('sisi').value)
+               let alas = parseInt (document.getElementById('alas').value)
+               let tinggi = parseInt (document.getElementById('tinggi').value)
+               let hasil = alas + tinggi + sisi
+               document.getElementById('hasil').innerHTML = "Luas Segitiga = " + hasil
+               let hasil1 = alas + tinggi + sisi
+               document.getElementById('hasil1').innerHTML = "Keliling Segitiga Siku Siku = " + hasil1
+          }
+     </script>
+</body>
+</html>
